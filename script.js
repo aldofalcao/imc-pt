@@ -1,11 +1,14 @@
-const resultado = document.getElementById("imc")
+const altura = document.querySelector('#altura')
+const peso = document.querySelector('#peso')
+const resultado = document.querySelector('#imc')
+const botao = document.querySelector('button')
+const formulario = document.querySelector('form')
 
-const limpar = () => resultado.innerHTML = ''
+altura.addEventListener('focus', e => {resultado.innerHTML = ''})
+peso.addEventListener('focus', e => {resultado.innerHTML = ''})
 
-const calcular = () => {
-    const botao = document.getElementById("btn")
-    const altura = document.getElementById("altura")
-    const peso = document.getElementById("peso")
+formulario.addEventListener('submit', e => {
+    e.preventDefault()
 
     if (altura.value === '' || peso.value === '') {
         resultado.innerHTML = 'Preencha os campos'
@@ -37,4 +40,4 @@ const calcular = () => {
     }
 
     botao.blur()
-}
+})

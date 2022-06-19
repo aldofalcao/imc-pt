@@ -35,7 +35,7 @@ footer {
     margin-top: 500px;
 }
 
-.form {
+form {
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -74,7 +74,7 @@ button:focus {
     font-size: 24px;
 }
 
-article {
+section {
     margin-bottom: 100px;
 }
 
