@@ -1,11 +1,11 @@
-const resultado = document.getElementById("imc")
+const resultado = document.querySelector('[data-js="mostrarMenssagem"]')
+const botao = document.querySelector('[data-js="botaoCalcularIMC"]')
 
-const limpar = () => resultado.innerHTML = ''
+botao.addEventListener('click', e => {
+    e.preventDefault()
 
-const calcular = () => {
-    const botao = document.getElementById("btn")
-    const altura = document.getElementById("altura")
-    const peso = document.getElementById("peso")
+    const altura = document.querySelector('[data-js="altura"]')
+    const peso = document.querySelector('[data-js="peso"]')
 
     if (altura.value === '' || peso.value === '') {
         resultado.innerHTML = 'Preencha os campos'
@@ -37,4 +37,4 @@ const calcular = () => {
     }
 
     botao.blur()
-}
+})
